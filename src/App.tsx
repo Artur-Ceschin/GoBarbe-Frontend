@@ -1,9 +1,10 @@
+import { SingIn } from './pages/SingIn';
 import GlobalStyle from './styles/global';
 
 function App() {
   return (
     <>
-      <h1>Go Barber</h1>
+      <SingIn />
       <GlobalStyle />
     </>
   );
