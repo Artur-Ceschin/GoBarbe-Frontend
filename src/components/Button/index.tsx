@@ -3,10 +3,10 @@ import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-export function Button<ButtonProps>() {
+export function Button({ children, ...rest }: ButtonProps) {
   return (
-    <Container>
-      <button type="button">Teste</button>
+    <Container type="button" {...rest}>
+      {children}
     </Container>
   );
 }
