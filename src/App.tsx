@@ -1,15 +1,17 @@
-import { SignIn } from './pages/SignIn';
-import { SingUp } from './pages/SignUp';
-import GlobalStyle from './styles/global';
+import { AuthContext } from "./context/AuthContext"
+import { SignIn } from "./pages/SignIn"
+import GlobalStyle from "./styles/global"
 
 function App() {
   return (
     <>
-      <SignIn />
-      {/* <SingUp /> */}
+      <AuthContext.Provider value={{ name: "Artur" }}>
+        <SignIn />
+        {/* <SingUp /> */}
+      </AuthContext.Provider>
       <GlobalStyle />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
