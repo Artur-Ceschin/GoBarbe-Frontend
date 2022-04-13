@@ -1,14 +1,14 @@
-import { AuthContext } from "./context/AuthContext"
+import { AppProvider } from "./hooks"
 import { SignIn } from "./pages/SignIn"
 import GlobalStyle from "./styles/global"
 
 function App() {
   return (
     <>
-      <AuthContext.Provider value={{ name: "Artur" }}>
+      <AppProvider>
         <SignIn />
         {/* <SingUp /> */}
-      </AuthContext.Provider>
+      </AppProvider>
       <GlobalStyle />
     </>
   )
