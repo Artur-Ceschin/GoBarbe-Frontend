@@ -1,13 +1,15 @@
+import { BrowserRouter } from "react-router-dom"
 import { AppProvider } from "./hooks"
-import { SignIn } from "./pages/SignIn"
+import { MainRoutes } from "./routes"
 import GlobalStyle from "./styles/global"
 
 function App() {
   return (
     <>
       <AppProvider>
-        <SignIn />
-        {/* <SingUp /> */}
+        <BrowserRouter>
+          <MainRoutes />
+        </BrowserRouter>
       </AppProvider>
       <GlobalStyle />
     </>
